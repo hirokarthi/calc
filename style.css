@@ -105,15 +105,3 @@ button{
 
 }
 
-/* head txt (hirokarthi) */
-.head{
-    padding-top: 25px;
-    padding-left: 10px;
-    font-size: 35px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 77, 77);
-}
-
