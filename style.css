@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+    font-family: sans-serif;
+    outline: none;
+
+}
+/* container */
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* calculator */
+.calculator{
+    background-color: #ecf0f3;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+                    5px 5px 12px rgba(0, 0, 0,.16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+    
+}
+/* input */
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff,
+                    inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(70, 70, 70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+
+}
+
+
+/* button */
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+                    5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+    
+
+}
+
+/* button hover for number */
+.no:hover{
+    transform: scale(1.1);
+    background-color: rgb(71, 71, 255);
+}
+
+/* button hover for delete */
+.del:hover{
+    background-color: rgb(255, 66, 66);
+    transform: scale(1.1);
+}
+
+/* button hover for operators */
+.operators:hover{
+    background-color: purple;
+    transform: scale(1.1);
+    
+}
+
+/* equal hover */
+.equal:hover{
+    background-color: green;
+    transform: scale(1.1);
+    
+
+
+}
+
+
+/* equal symbol */
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+                    5px 5px 12px rgba(0, 0, 0, .16);
+
+}
+
+/* head txt (hirokarthi) */
+.head{
+    padding-top: 25px;
+    padding-left: 10px;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 77, 77);
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="calculator">
+            <h2 class="head">hirokarthi</h2>
+            <input type="text" placeholder="0" id="output-screen">
+            <button class="del" onclick="Clear()">CL</button>
+            <button class="del" onclick="del()">DEL</button>
+            <button class="operators" onclick="display('%')">%</button>
+            <button class="operators" onclick="display('/')">/</button>
+            <button class="no" onclick="display('7')">7</button>
+            <button class="no" onclick="display('8')">8</button>
+            <button class="no" onclick="display('9')">9</button>
+            <button class="operators" onclick="display('*')">*</button>
+            <button class="no" onclick="display('4')">4</button>
+            <button class="no" onclick="display('5')">5</button>
+            <button class="no" onclick="display('6')">6</button>
+            <button class="operators" onclick="display('-')">-</button>
+            <button class="no" onclick="display('1')">1</button>
+            <button class="no" onclick="display('2')">2</button>
+            <button class="no" onclick="display('3')">3</button>
+            <button class="operators" onclick="display('+')">+</button>
+            <button class="no" onclick="display('.')">.</button>
+            <button class="no" onclick="display('0')">0</button>
+            <button  class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let outputScreen = document.getElementById('output-screen');
+
+
+
+        function display(num){
+            outputScreen.value += num;
+        }
+
+        function calculate(){
+            try{
+                outputScreen.value = eval(outputScreen.value);
+            }
+            catch(err){
+                alert("Invalid")
+            }
+        }
+
+        function Clear(){
+            outputScreen.value = " ";
+        }
+
+        function del(){
+            outputScreen.value = outputScreen.value.slice(0, -1);
+        }
+
+
+
+
+
+    </script>
+
+    <!-- <div class="container">
+        <div class="calculator" name="calc">
+            <input type="text" readonly class="value" name="txt"/>
+            <span class="num" onclick="calc.txt.value =' '">C</span>
+            <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+            <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+            <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+            <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+            <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+            <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+            <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+            <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+            <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+            <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+            <span class="num" onclick="document.calc.txt.value +='+'">+</span>
+            <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+            <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+            <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+            <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+            <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+            <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+            <span class="num" onclick="document.calc.txt.value +=eval(calc.txt.value)">=</span>
+        </div>
+    </div>
+     -->
+</body>
+</html>
